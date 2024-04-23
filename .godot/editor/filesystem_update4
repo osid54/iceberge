@@ -1,0 +1,6 @@
+res://scenes/main.tscn
+res://MeshInstance3D.gd
+res://scenes/mesh_instance_3d.tscn
+res://test/testMesh.gd
+res://assets/actors/penguin.tscn
+res://assets/env/iceberg.tscn

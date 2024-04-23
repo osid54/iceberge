@@ -1,0 +1,26 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="iceberge"
+run/main_scene="res://scenes/main.tscn"
+config/features=PackedStringArray("4.2", "Forward Plus")
+
+[file_customization]
+
+folder_colors={
+"res://assets/": "red",
+"res://scenes/": "blue",
+"res://shaders/": "purple",
+"res://src/": "teal",
+"res://test/": "gray",
+"res://themes/": "pink"
+}

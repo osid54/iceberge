@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0jv0fswgfu4f"]
+
+[ext_resource type="PackedScene" uid="uid://bpsylc5meiu4y" path="res://assets/actors/penguin.tscn" id="1_cxij3"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_fqwn4"]
+top_radius = 10.0
+bottom_radius = 12.0
+height = 1.0
+radial_segments = 12
+rings = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jeyqy"]
+diffuse_mode = 1
+specular_mode = 1
+albedo_color = Color(0.870588, 1, 1, 1)
+metallic = 0.45
+roughness = 0.75
+rim_enabled = true
+rim = 0.25
+rim_tint = 1.0
+clearcoat_roughness = 1.0
+ao_light_affect = 1.0
+heightmap_scale = -15.65
+grow_amount = -0.36
+
+[node name="MeshInstance3D" type="MeshInstance3D"]
+mesh = SubResource("CylinderMesh_fqwn4")
+surface_material_override/0 = SubResource("StandardMaterial3D_jeyqy")
+
+[node name="penguin" parent="." instance=ExtResource("1_cxij3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.587252, 1, -0.256839)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-2.58096e-08, -0.5, 0.866025, -1.49012e-08, 0.866025, 0.5, -1, 0, -2.98023e-08, 22, 13, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
