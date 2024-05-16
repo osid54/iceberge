@@ -17,3 +17,6 @@ shape = SubResource("SphereShape3D_361rr")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 mesh = SubResource("PlaneMesh_6ijuu")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-2.58096e-08, -0.5, 0.866025, -1.49012e-08, 0.866025, 0.5, -1, 0, -2.98023e-08, 22, 13, 0)

@@ -1,3 +1,15 @@
-[gd_scene format=3 uid="uid://lxnof8lji4mj"]
+[gd_scene load_steps=3 format=3 uid="uid://lxnof8lji4mj"]
+
+[ext_resource type="PackedScene" uid="uid://bpsylc5meiu4y" path="res://assets/actors/penguin.tscn" id="1_jd8jf"]
+[ext_resource type="PackedScene" uid="uid://c0jv0fswgfu4f" path="res://assets/env/iceberg.tscn" id="2_hwcmb"]
 
 [node name="main" type="Node3D"]
+
+[node name="penguin" parent="." instance=ExtResource("1_jd8jf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.587252, 1, -0.256839)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+directional_shadow_mode = 0
+sky_mode = 1
+
+[node name="berg" parent="." instance=ExtResource("2_hwcmb")]
