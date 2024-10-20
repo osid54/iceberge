@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bpsylc5meiu4y"]
+[gd_scene load_steps=7 format=3 uid="uid://bpsylc5meiu4y"]
 
 [ext_resource type="Script" path="res://assets/actors/penguin.gd" id="1_8xw5c"]
 
@@ -8,6 +8,14 @@
 size = Vector2(1, 2)
 orientation = 0
 
+[sub_resource type="Environment" id="Environment_v5phy"]
+background_mode = 1
+background_color = Color(0.44824, 0.586336, 0.717237, 1)
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_61bd5"]
+
+[sub_resource type="Compositor" id="Compositor_g3es2"]
+
 [node name="penguin" type="CharacterBody3D"]
 script = ExtResource("1_8xw5c")
 
@@ -15,8 +23,11 @@ script = ExtResource("1_8xw5c")
 shape = SubResource("SphereShape3D_361rr")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 1, 0)
 mesh = SubResource("PlaneMesh_6ijuu")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-2.58096e-08, -0.5, 0.866025, -1.49012e-08, 0.866025, 0.5, -1, 0, -2.98023e-08, 22, 13, 0)
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 13, 22)
+environment = SubResource("Environment_v5phy")
+attributes = SubResource("CameraAttributesPractical_61bd5")
+compositor = SubResource("Compositor_g3es2")

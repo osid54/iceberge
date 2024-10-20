@@ -1,4 +1,4 @@
-res://assets/actors/penguin.tscn
-res://assets/actors/penguin.gd
 res://scenes/main.tscn
 res://assets/env/iceberg.tscn
+res://assets/actors/penguin.tscn
+res://assets/actors/penguin.gd
