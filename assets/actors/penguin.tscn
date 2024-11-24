@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bpsylc5meiu4y"]
+[gd_scene load_steps=8 format=3 uid="uid://bpsylc5meiu4y"]
 
 [ext_resource type="Script" path="res://assets/actors/penguin.gd" id="1_8xw5c"]
+[ext_resource type="Texture2D" uid="uid://cv224dlc1h5ws" path="res://src/sprites/peng.png" id="2_ods5w"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_361rr"]
+radius = 0.226632
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_6ijuu"]
 size = Vector2(1, 2)
@@ -20,14 +22,21 @@ background_color = Color(0.44824, 0.586336, 0.717237, 1)
 script = ExtResource("1_8xw5c")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0102522, 0.209842, 0.0310199)
 shape = SubResource("SphereShape3D_361rr")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 1, 0)
+visible = false
 mesh = SubResource("PlaneMesh_6ijuu")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 13, 22)
+transform = Transform3D(1, 0, 0, 0, 0.932696, 0.360665, 0, -0.360665, 0.932696, 0, 2.0252, 6)
 environment = SubResource("Environment_v5phy")
 attributes = SubResource("CameraAttributesPractical_61bd5")
 compositor = SubResource("Compositor_g3es2")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0.480633, 0)
+axis = 0
+texture = ExtResource("2_ods5w")
